@@ -12,6 +12,9 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
     console.log("Play Video");
     video.play();
+    var volumeDisplay = document.getElementById('volume');
+    volumeDisplay.textContent = video.volume * 100 + "%";
+    // same as: document.querySelector("#volume").innerHTML = video.volume * 100 + "%";
 })
 
 var volumeSlider = document.getElementById('slider');
